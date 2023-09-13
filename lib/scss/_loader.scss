@@ -1,0 +1,29 @@
+.loader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333 !important;
+    
+    .logo-container {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        
+        .spinner-border {
+            width: 10.2rem;
+            height: 10.2rem;
+            margin-top: -1px;
+            margin-left: -1px;
+        }
+    }
+    
+    img {
+        width: 10rem;
+        position: absolute;
+    }
+}

@@ -1,0 +1,378 @@
+@import './vars';
+@import './mixins';
+@import './imports';
+
+@import './loader';
+@import './navbar';
+@import './cards';
+@import './dark';
+//@import './timeline.scss';
+//@import './experience_card.scss';
+
+html {
+    overflow-x: hidden
+}
+
+button {
+    border-width: 3px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    font-family: $primary-font;
+    text-transform: uppercase;
+}
+
+* {
+    font-family: $secondary-font;
+//    font-weight: 200;
+
+}
+
+textarea {
+    resize: none
+}
+
+label {
+    font-size: 1.1rem;
+    padding: 1rem
+}
+
+main {
+    animation: 1s ease fadein;
+    -webkit-animation: 1s ease fadein;
+}
+
+.mainbod,
+.full {
+    transition: .4s ease-out
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: space-around;
+    
+    .card- {
+        &header, &body {
+            background-color: rgba(0,0,0,0);
+            border: 0px;
+        }
+    }
+}
+
+//#intro {
+//    background-color: $dark1;
+//}
+//
+//#about {
+//    background-color: $dark2;
+//}
+//
+//#work {
+//    background-color: $dark3;
+//}
+//
+//#exp {
+//    background-color: $dark4;
+//}
+//
+//#con {
+//    background-color: $dark5;
+//}
+
+.intex {
+    padding: 2rem;
+    letter-spacing: .8px;
+    font-size: 1.2rem
+}
+
+section {
+    padding: 5rem 0;
+    
+    .container-fluid h1 {
+        margin: 5rem auto;
+        margin-top: 0;
+        text-align: center
+    }
+}
+
+.intropic {
+    border-radius: 100%;
+//    border: 6px solid #c6ffc6;
+    cursor: pointer;
+    transition: .4s ease-out;
+    
+}
+
+.banner {
+    width: 100%;
+    height: 5rem;
+    position: relative
+}
+
+.mypic {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(97, 105, 103, 0.34);
+    overflow: hidden;
+    height: 0;
+    transition: .5s ease;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.imgcontain {
+    position: relative;
+    padding: 1rem;
+    width: 100%;
+    max-width: 300px;
+        
+    &:hover {
+        .mypic {
+            bottom: 0;
+            height: 100%;
+        }
+        
+        .intropic {
+            border-color: #4caf50
+        }
+    }
+
+}
+
+
+.text {
+    white-space: nowrap;
+    font-size: 16px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+.devicons {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    
+    
+    div {
+        padding: 1rem;
+        
+        .colored {
+            font-size: 2.5rem
+        }
+    }
+
+}
+
+
+.fullimg {
+    width: 70%
+}
+
+.none {
+    display: none
+}
+
+.fromtop {
+    animation: 1s ease-out fromtop;
+    -webkit-animation: 1s ease-out fromtop;
+    transition: .4s ease-out
+}
+
+.frombottom {
+    animation: 1s ease-out frombottom;
+    -webkit-animation: 1s ease-out frombottom;
+    transition: .4s ease-out
+}
+
+.tobottom {
+    animation: 1s ease-out tobottom;
+    -webkit-animation: 1s ease-out tobottom;
+    transition: .4s ease-out
+}
+
+.totop {
+    animation: 1s ease-out totop;
+    -webkit-animation: 1s ease-out totop;
+    transition: .4s ease-out
+}
+
+.zoom {
+    animation: 1s ease-out zoom;
+    -webkit-animation: 1s ease-out zoom;
+    transition: .4s ease-out
+}
+
+.show {
+    display: block !important;
+    animation: none !important
+}
+
+.progress {
+    height: 5px !important;
+    border-radius: 0 !important;
+    background-color: rgba(0, 0, 0, 0)
+}
+
+.progress-bar {
+    background-color: #ca5762
+}
+
+.cs li {
+    padding: 1rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    transition: .4s ease-out;
+    
+    &:hover {
+        cursor: pointer;
+        border-right-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.5)
+    }
+}
+
+
+form {
+    
+    button[type=submit] {
+        border-color: #00c6d2 !important;
+        color: #00c6d2;
+        
+        &:hover {
+            background-color: #00c6d2;
+        }
+
+        &:active {
+            background-color: #00c6d2 !important;
+            border-color: #00c6d2 !important;
+            box-shadow: 0 0 0 0.2rem rgba(0, 198, 210, 0.5) !important;
+        }
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem rgba(0, 198, 210, 0.5);
+        }
+    }
+}
+
+
+
+.form-control {
+    padding: .5rem .9rem;
+    border-radius: 0px;
+}
+
+textarea.form-control {
+    height: 10rem
+}
+
+.social-card {
+    margin: {
+        bottom: 1rem;
+    }
+    padding: 1rem;
+    border-radius: 24px;
+    max-width: 300px;
+    width: 100%;
+    min-height: 100px;
+    height: auto;
+    
+    @include social-card-color-theme;
+    
+    .row {
+        height: 100%;
+    }
+    
+    .col-4 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .col h3 {
+        display: none;
+    }
+    
+    &.github {
+        @include social-card-color-theme(#000, #fff);
+    }
+    
+    &.linkedin {
+        @include social-card-color-theme(#1166c2, #fff);
+    }
+    
+    &.twitter {
+        @include social-card-color-theme(#1d9bf0, #fff);
+    }
+    
+    &.stackoverflow {
+        @include social-card-color-theme(#f48024, #fff);
+    }
+    
+    &.soundcloud {
+        @include social-card-color-theme(#fa4006, #fff);
+    }
+    
+    &.youtube {
+        @include social-card-color-theme(#ff2e2e, #fff);
+    }
+    
+    &.quora {
+        @include social-card-color-theme(#b92b27, #fff);
+    }
+    
+    &.discord {
+        @include social-card-color-theme(#5865F2, #fff);
+    }
+    
+    
+    .row {
+        position: relative;
+        
+        svg {
+            width: 80%;
+            height: auto;
+        }
+        
+        .col {
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            flex-direction: column;
+            
+            a {
+                color: inherit !important;
+                word-break: break-all;
+            }
+        }
+    }
+    
+}
+
+/* Media Queries */
+@media screen and (max-width: 1000px) {
+    .conlist li {
+        padding: 1rem
+    }
+
+    .fullimg {
+        width: 100%
+    }
+}
