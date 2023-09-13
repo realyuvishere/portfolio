@@ -1,18 +1,24 @@
 @import './mixins';
-
-.theme_toggle {
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    right:  0;
-    margin: 1rem;
-    
-    button {
-        border-radius: 24px !important;
-    }
-}
+@import './theme';
 
 body.dark-mode {
+    
+    @each $div, $color in $dark_theme {
+        ##{$div} {
+            background-color: $color;
+            color: map-get($map: $light_theme, $key: $div);
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                color: map-get($map: $main_theme, $key: $div);
+            }
+        }
+    }
+
     .social-card {
         &.github {
             @include social-card-color-theme(#fff, #000);

@@ -3,15 +3,50 @@ $primary-font: 'Work Sans';
 $secondary-font: 'Nunito Sans';
 $mono-font: 'Cutive Mono';
 
-$primary: #f2df42;
-$complementary: #4254f2;
-$analogous1: #f28942;
-$analogous2: #acf242;
-$triadic1: #54f242;
+$primary: #047999;
+$complementary: #044ea8;
+$analogous1: #4040ba;
+$analogous2: #06a506;
+$triadic1: #FFFDEB;
 $triadic2: #42f2e1;
 
-$dark1: #1D1F1D;
-$dark2: #101A26;
-$dark3: #18272B;
-$dark4: #222222;
+
+$main_1: $primary;
+$main_2: $complementary;
+$main_3: $analogous1;
+$main_4: $analogous2;
+$main_5: $triadic1;
+$main_6: $triadic2;
+
+
+$light_1: mix(#fff, $primary, 60%);
+$light_2: mix(#fff, $complementary, 60%);
+$light_3: mix(#fff, $analogous1, 60%);
+$light_4: mix(#fff, $analogous2, 60%);
+$light_5: mix(#fff, $triadic1, 60%);
+$light_6: mix(#fff, $triadic2, 60%);
+
+$dark_1: mix(#000, $primary, 75%);
+$dark_2: mix(#000, $complementary, 75%);
+$dark_3: mix(#000, $analogous1, 75%);
+$dark_4: mix(#000, $analogous2, 75%);
+$dark_5: mix(#000, $triadic1, 75%);
+$dark_6: mix(#000, $triadic2, 75%);
+
+
+
+$dark1: #06a506;
+$dark2: #044ea8;
+$dark3: #047999;
+$dark4: #bc0b0b;
 $dark5: #121212;
+
+
+$h1_fs: 4.209rem;
+$h2_fs: 3.157rem;
+$h3_fs: 2.369rem;
+$h4_fs: 1.777rem;
+$h5_fs: 1.333rem;
+$h6_fs: 1.1rem;
+
+$small_fs: .75rem;

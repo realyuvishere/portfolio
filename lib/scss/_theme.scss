@@ -1,0 +1,25 @@
+@import './vars';
+
+$light_theme: (
+    'intro': $light_1,
+    'work': $light_2,
+    'exp': $light_3,
+    'edu': $light_4,
+    'con': $light_5,
+);
+
+$dark_theme: (
+    'intro': $dark_1,
+    'work': $dark_2,
+    'exp': $dark_3,
+    'edu': $dark_4,
+    'con': $dark_5,
+);
+
+$main_theme: (
+    'intro': $main_1,
+    'work': $main_2,
+    'exp': $main_3,
+    'edu': $main_4,
+    'con': $main_5,
+);

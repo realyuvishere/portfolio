@@ -2,13 +2,13 @@
 
 .exp-card {
     padding: 1.25rem 1rem;
-    border: 2px solid rgba(#000,0.1);
-    border-radius: 24px;
+    border: 2px solid rgba(#fff, 0.1);
+    border-radius: 10px;
     margin: 0.5rem;
     width: 100%;
     max-width: 400px;
     position: relative;
-    background-color: rgba(#fff, 0.15);
+    background-color: rgba(#fff, 0.1);
     text-align: center;
     
     .card-body {
@@ -35,7 +35,8 @@
 }
 
 .work-card {
-    background-color: rgba(#fff, .1);
+    background-color: rgba(#fff, .15);
+    border: 2px solid rgba(#fff, 0.1);
     width: 25%;
     margin: 1rem 0.25rem;
     text-align: center;
@@ -45,7 +46,7 @@
     
     
     &:hover {
-        box-shadow: 0px 0px 10px 1px rgba(#8B9556, 1);
+        box-shadow: 0px 0px 10px 1px rgba(#333, .25);
     }
     
     .card- {
@@ -85,13 +86,13 @@
         }
         
         &button {
-            background-color: #6C8970;
+            background-color: $complementary;
             color: #fff;
             font-weight: 400;
             font-size: 1.25rem;
             
             &:focus {
-                box-shadow: 0 0 0 0.25rem rgba(#6C8970, 0.3);
+                box-shadow: 0 0 0 0.25rem rgba($complementary, 0.3);
             }
             &::after {
                 font-family: 'Font Awesome 5 Free';
@@ -105,11 +106,11 @@
             }
             
             &.collapsed {
-                color: $dark3;
+                color: $complementary;
                 background-color: rgba(#fff, 1);
                 
                 &::after {
-                    color: $dark3;
+                    color: $complementary;
                 }
             }
         }

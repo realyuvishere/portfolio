@@ -1,0 +1,17 @@
+@import './theme';
+
+
+.ts-box {
+    background-color: rgba($color: #fff, $alpha: .45);
+}
+
+@each $div, $color in $light_theme {
+    ##{$div} {
+        background-color: $color;
+        color: map-get($map: $main_theme, $key: $div);
+
+        h1, h2, h3, h4, h5, h6 {
+            color: map-get($map: $dark_theme, $key: $div);
+        }
+    }
+}
