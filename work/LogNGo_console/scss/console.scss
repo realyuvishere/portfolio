@@ -1,0 +1,56 @@
+@import './vars';
+@import './man.scss';
+
+#console {
+    position: relative;
+	font-size: 1.5rem;
+    padding: 10px;
+    
+    & ~ &_input, & ~ &_util_input {
+        opacity: 0;
+        width: 0;
+        overflow: hidden;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        height: 0;
+        display: block;
+    }
+    
+    .console_input_text {
+        position: relative;
+        display: block;
+        line-height: 24px;
+        
+        &_util {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        pre, &_util pre {
+            padding-left: 10px;
+            display: inline;
+            font-family: inherit;
+        }
+
+        &.focus pre, &_util.focus pre {
+			
+            &::after {
+              content: "";
+              position: absolute;
+              top: 0;
+              display: inline-block;
+              vertical-align: top;
+              width: 10px;
+              height: 24px;
+			  background-color: $green-color;
+              -webkit-animation: blink 1s step-end infinite;
+              animation: blink 1s step-end infinite;
+            }
+            
+        }
+        
+    }
+    
+}

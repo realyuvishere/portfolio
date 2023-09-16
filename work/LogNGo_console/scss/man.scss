@@ -1,0 +1,31 @@
+.man {
+    
+    &_heading {
+//        color: #FC6F53;
+        color: #e84f25;
+        text-align: left;
+    }
+    
+    &_content {
+        padding: 0 10%;
+        
+        &_option_wrapper {
+            
+            div:first-child {
+                display: flex;
+                align-items: center;
+//                justify-content: space-between;
+                
+                div:first-child {
+                    color: #fff;
+                }
+                div:not(:first-child) {
+                    margin: auto
+                }
+            }
+            
+        }
+        
+    }
+    
+}
