@@ -1,28 +1,6 @@
 @import './vars';
 
-.exp-card {
-    padding: 1.25rem 1rem;
-    border: 2px solid rgba(#000,0.1);
-    border-radius: 24px;
-    margin: 0.5rem;
-    width: 100%;
-    max-width: 400px;
-    position: relative;
-    background-color: rgba(#fff, 0.15);
-    text-align: center;
-    
-    .card-body {
-        div {
-            &:first-child {
-                font-size: 1.25rem;
-            }
-            
-            + div {
-                font-weight: 200;
-            }
-        }
-    }
-}
+$box-color: #8B9556;
 
 @media screen and (max-width: 720px) {
     #cards-container {
@@ -34,12 +12,10 @@
     }
 }
 
-$work-card-color: #6C8970;
-
 .work-card {
     background-color: rgba(#fff, .1);
-    width: 45%;
-    margin: .5rem 0.25rem;
+    width: 25%;
+    margin: 1rem 0.25rem;
     text-align: center;
     transition: .3s ease box-shadow;
 //    border-color: rgba(#8B9556, 1);
@@ -47,8 +23,7 @@ $work-card-color: #6C8970;
     
     
     &:hover {
-        box-shadow: 0px 0px 10px 1px rgba($work-card-color, 1);
-        background-color: $work-card-color;
+        box-shadow: 0px 0px 10px 1px rgba($box-color, 0.2);
     }
     
     .card- {
@@ -63,26 +38,13 @@ $work-card-color: #6C8970;
         
         &body {
             a {
-                color: $work-card-color;
-                word-break: break-all;
-
-                &.link {
-                    color: inherit;
-
-                    &:visited {
-                        color: inherit;
-                    }
-
-                    &:hover, &:active {
-                        color: inherit;
-                    }
-                }
+                color: $box-color;
                 
                 &:visited {
-                    color: $work-card-color;
+                    color: $box-color;
                 }
                 &:hover, &:active {
-                    color: #fff;
+                    color: #002400
                 }
                 
             }
@@ -90,29 +52,7 @@ $work-card-color: #6C8970;
     }
 }
 
-#misc-work {
-    .work-card {
-        width: 100%;
-    }
-}
-
-#music-work {
-    .work-card {
-        width: 100%;
-        .card-body {
-            text-align: left;
-
-            .link-container {
-                display: flex;
-                position: relative;
-                align-items: flex-start;
-                padding: .5rem;
-            }
-        }
-    }
-}
-
-#work_accordion, #high_school_accordion, #ug_accordion {
+#work_accordion {
     * {
         border-radius: 24px !important;
     }
@@ -149,19 +89,6 @@ $work-card-color: #6C8970;
                 &::after {
                     color: $dark3;
                 }
-            }
-        }
-    }
-}
-
-#high_school_accordion, #ug_accordion {
-    .accordion- {
-        
-        &button {
-            background-color: #1f5a9a;
-            
-            &:focus {
-                box-shadow: 0 0 0 0.25rem rgba(#1f5a9a, 0.3);
             }
         }
     }

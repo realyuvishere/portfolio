@@ -1,18 +1,16 @@
 @import './vars';
 @import './mixins';
-@import './imports';
+@import './_imports.scss';
 
-@import './loader';
-@import './navbar';
+@import './_loader.scss';
+@import './_navbar.scss';
 @import './cards';
-@import './dark';
-@import './light';
+@import './_dark.scss';
 //@import './timeline.scss';
 //@import './experience_card.scss';
 
 html {
-    overflow-x: hidden;
-    font-size: 18px;
+    overflow-x: hidden
 }
 
 button {
@@ -33,25 +31,6 @@ h6,
 .h6 {
     font-family: $primary-font;
     text-transform: uppercase;
-}
-
-h1 {
-    font-size: $h1_fs;
-}
-h2 {
-    font-size: $h2_fs;
-}
-h3 {
-    font-size: $h3_fs;
-}
-h4 {
-    font-size: $h4_fs;
-}
-h5 {
-    font-size: $h5_fs;
-}
-h6 {
-    font-size: $h6_fs;
 }
 
 * {
@@ -93,6 +72,42 @@ main {
     }
 }
 
+//#intro {
+//    background-color: $dark1;
+//}
+//
+//#about {
+//    background-color: $dark2;
+//}
+//
+//#work {
+//    background-color: $dark3;
+//}
+//
+//#exp {
+//    background-color: $dark4;
+//}
+//
+//#con {
+//    background-color: $dark5;
+//}
+
+#edu {
+    h1, h2 {
+        text-align: center
+    }
+
+    h2 {
+        margin-bottom: 2rem;
+    }
+}
+
+.intex {
+    padding: 2rem;
+    letter-spacing: .8px;
+    font-size: 1.2rem
+}
+
 section {
     padding: 5rem 0;
     
@@ -111,13 +126,6 @@ section {
     
 }
 
-.ts-box {
-    padding: 2rem;
-    margin: 2rem 1rem;
-    border-radius: 10px;
-    border: 2px solid rgba(#fff, 0.1);
-}
-
 .banner {
     width: 100%;
     height: 5rem;
@@ -129,7 +137,7 @@ section {
     bottom: 100%;
     left: 0;
     right: 0;
-    // background-color: rgba(97, 105, 103, 0.34);
+    background-color: rgba(97, 105, 103, 0.34);
     overflow: hidden;
     height: 0;
     transition: .5s ease;
@@ -149,9 +157,9 @@ section {
             height: 100%;
         }
         
-        // .intropic {
-        //     border-color: #4caf50
-        // }
+        .intropic {
+            border-color: #4caf50
+        }
     }
 
 }
@@ -159,7 +167,7 @@ section {
 
 .text {
     white-space: nowrap;
-    // font-size: 16px;
+    font-size: 16px;
     position: absolute;
     overflow: hidden;
     top: 50%;
@@ -176,17 +184,11 @@ section {
     
     
     div {
-        padding: .5rem;
+        padding: 1rem;
         
         .colored {
-            font-size: 1.5rem;
-
-            + div {
-                padding: 0;
-                font-size: $small_fs;
-            }
+            font-size: 2.5rem
         }
-
     }
 
 }
@@ -245,17 +247,17 @@ section {
     background-color: #ca5762
 }
 
-// .cs li {
-//     padding: 1rem;
-//     border-right: 2px solid rgba(255, 255, 255, 0.5);
-//     transition: .4s ease-out;
+.cs li {
+    padding: 1rem;
+    border-right: 2px solid rgba(255, 255, 255, 0.5);
+    transition: .4s ease-out;
     
-//     &:hover {
-//         cursor: pointer;
-//         border-right-color: rgba(255, 255, 255, 0.5);
-//         background-color: rgba(255, 255, 255, 0.5)
-//     }
-// }
+    &:hover {
+        cursor: pointer;
+        border-right-color: rgba(255, 255, 255, 0.5);
+        background-color: rgba(255, 255, 255, 0.5)
+    }
+}
 
 
 form {
@@ -277,18 +279,6 @@ form {
         &:focus {
             box-shadow: 0 0 0 0.2rem rgba(0, 198, 210, 0.5);
         }
-    }
-}
-
-.theme_toggle {
-    position: fixed;
-    z-index: 100;
-    bottom: 0;
-    right: 0;
-    margin: 1rem;
-
-    button {
-        border-radius: 24px !important;
     }
 }
 
@@ -361,6 +351,10 @@ textarea.form-control {
     &.discord {
         @include social-card-color-theme(#5865F2, #fff);
     }
+
+    &.telegram {
+        @include social-card-color-theme(#24A1DE, #fff);
+    }
     
     
     .row {
@@ -385,6 +379,7 @@ textarea.form-control {
     }
     
 }
+
 
 /* Media Queries */
 @media screen and (max-width: 1000px) {

@@ -1,8 +1,8 @@
-@mixin social-card-color-theme($social-card-color: #333, $card-text-color: #fff) {
+@mixin social-card-color-theme($social-card-color: #fff, $card-text-color: #333) {
     
-    color: mix(#000, $social-card-color, 70%);
+    color: $social-card-color;
     border: 2px solid rgba($color: #fff, $alpha: 0.1);
-    background-color: rgba($social-card-color, 0.5);
+    background-color: rgba($social-card-color, 0.1);
     transition: .3s ease;
     
     &:hover, &:active {
