@@ -39,6 +39,10 @@ h6,
 
 }
 
+a {
+    font-weight: 500;
+}
+
 textarea {
     resize: none
 }
@@ -105,7 +109,8 @@ main {
 .intex {
     padding: 2rem;
     letter-spacing: .8px;
-    font-size: 1.2rem
+    font-size: 1.2rem;
+    z-index: 1;
 }
 
 section {
@@ -118,13 +123,6 @@ section {
     }
 }
 
-.intropic {
-    border-radius: 100%;
-//    border: 6px solid #c6ffc6;
-    cursor: pointer;
-    transition: .4s ease-out;
-    
-}
 
 .banner {
     width: 100%;
@@ -149,16 +147,40 @@ section {
     position: relative;
     padding: 1rem;
     width: 100%;
-    max-width: 300px;
-        
+    max-width: 400px;
+    
+    .intropic {
+        border-radius: 50px;
+    //    border: 6px solid #c6ffc6;
+        // cursor: pointer;
+        transition: .4s ease-out;
+        z-index: 1;
+        position: relative;
+    } 
+
+    .blob {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        max-width: 300px;
+        max-height: 300px;
+        border-radius: 50px;
+        z-index: 0;
+        background-color: rgba($color: #000000, $alpha: .25);
+        margin-top: -65%;
+        margin-left: -25%;
+
+        @media (max-width: 768px) {
+            & {
+                display: none;
+            }
+        }
+    }
+
     &:hover {
         .mypic {
             bottom: 0;
             height: 100%;
-        }
-        
-        .intropic {
-            border-color: #4caf50
         }
     }
 
@@ -181,10 +203,12 @@ section {
     justify-content: space-around;
     flex-wrap: wrap;
     text-align: center;
+    font-weight: 400;
     
     
     div {
         padding: 1rem;
+        font-family: 'Courier New', Courier, monospace !important;
         
         .colored {
             font-size: 2.5rem
@@ -303,6 +327,7 @@ textarea.form-control {
     width: 100%;
     min-height: 100px;
     height: auto;
+    font-weight: 500 !important;
     
     @include social-card-color-theme;
     

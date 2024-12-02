@@ -1,6 +1,16 @@
 .navbar {
-    padding: 8px;
-    box-shadow: 0px 0px 20px 0px rgba(#000, 0.1);
+    padding: 8px 2rem;
+    box-shadow: 0px 0px 5px 0px rgba(#000, 0.1);
+    bottom: 1%;
+    left: 0;
+    right: 0;
+    border-radius: 50px;
+    margin: auto;
+    position: fixed;
+    z-index: 100;
+    width: max-content;
+    box-sizing: border-box;
+
     
     @media (max-width: 768px) {
         & {
@@ -10,6 +20,11 @@
     
     .navbar-toggler {
         margin: 0 auto;
+        border: 0;
+
+        &:focus {
+            box-shadow: none;
+        }
     }
     
     #mainnav {
@@ -26,13 +41,20 @@
             
             .nav-link {
                 transition: .3s ease;
+                padding: 8px 16px;
+                border-radius: 50px;
+
+                &:hover {
+                    background-color: rgba(#000, 0.1);
+                }
                 
                 @media (max-width: 768px) {
                     & {
-                        padding: 8px 16px;
+                        padding: 8px 0;
+                        padding-left: 4rem;
                         
-                        &:hover {
-                            padding: 8px 32px;
+                        &:hover, &:active {
+                            // padding: 8px 32px;
                             background-color: rgba(#000, 0.1);
                         }
                     }
