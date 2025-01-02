@@ -169,12 +169,14 @@ class Slimdown {
     <body>
         <div class="container mt-5">
             <h1 class="mb-4">Miscellaneous Projects</h1>
+
+			<h3>Self hosted</h3>
             <div class="row">
                 <div class="table-responsive">
                     <table class="table">
                         <tr>
                             <th>Project</th>
-                            <th>Link</th>
+                            <th>Deployed link</th>
                             <th>README</th>
                         </tr>
                         <?php
@@ -184,11 +186,11 @@ class Slimdown {
                             $folderName = basename($folder);
                             $readmePath = $folder . '/README.md';
                             $hasReadme = file_exists($readmePath);
-                            $readmeLink = $hasReadme ? "<a data-bs-toggle='collapse' data-bs-target='#collapse$folderName' aria-expanded='true' aria-controls='collapse$folderName'>README</a>" : "No README";
+                            $readmeLink = $hasReadme ? "<button class='btn btn-link' data-bs-toggle='collapse' data-bs-target='#collapse$folderName' aria-expanded='true' aria-controls='collapse$folderName'>README</button>" : "No README";
 
                             echo "<tr>
                                     <td>$folderName</td>
-                                    <td><a href='$folder'>$folderName</a></td>
+                                    <td><a href='$folder' class='btn btn-link'><i class='fas fa-link'></i></a></td>
                                     <td id='heading$folderName'>$readmeLink</td>
                                   </tr>";
                             
@@ -209,6 +211,32 @@ class Slimdown {
                                     </tr>";
                             }
                         }
+                        ?>
+                    </table>
+                </div>
+            </div>
+
+			<h3>GitHub hosted</h3>
+			<div class="row">
+                <div class="table-responsive">
+                    <table class="table">
+                        <tr>
+                            <th>Project name</th>
+							<th>Description</th>
+                            <th>Deployed link</th>
+                            <th>GitHub repo link</th>
+                        </tr>
+                        <?php
+						$data = json_decode(file_get_contents('./projects.json'), true);
+						foreach ($data as $project) {
+							?>
+							<tr>
+								<td><?= $project['name'] ?></td>
+								<td><?= $project['description'] ?></td>
+								<td><a href="<?= $project['deployed_link'] ?>" class="btn btn-link"><i class="fas fa-link"></i></a></td>
+								<td><a href="<?= $project['github_link'] ?>" class="btn btn-dark"><i class="fab fa-github"></i></a></td>
+							<?php
+						}
                         ?>
                     </table>
                 </div>

@@ -1,0 +1,57 @@
+[
+    {
+        "name": "Coroverify",
+        "description": "An open source initiative to help the users in gathering information regarding COVID-19.",
+        "url": "",
+        "github": "https://github.com/realyuvishere/coroverify"
+    },
+    {
+        "name": "Krishi Kalyan",
+        "description": "A virtual marketplace which allows farmers to list their produced goods and interact with buyers directly.",
+        "url": "",
+        "github": "https://github.com/realyuvishere/Krishi-Kalyan"
+    },
+    {
+        "name": "Saavan '23 pre-launch website",
+        "description": "A static website for the pre-launch of Saavan '23, the annual online-hosted fest of IITM BS student community.",
+        "url": "https://realyuvishere.github.io/saavan23_static/",
+        "github": "https://github.com/realyuvishere/saavan23_static"
+    },
+    {
+        "name": "Wobb prototype website",
+        "description": "A static prototype website made as a freelance trial project.",
+        "url": "https://realyuvishere.github.io/wobb_assignment/",
+        "github": "https://github.com/realyuvishere/wobb_assignment"
+    },
+    {
+        "name": "Daostruct prototype website",
+        "description": "A static prototype website made as a freelance trial project using NASA's API.",
+        "url": "https://daostruct-fe-assignment.vercel.app/",
+        "github": "https://realyuvishere.github.io/wobb_assignment/"
+    },
+    {
+        "name": "Flask blogger",
+        "description": "A generic blogging site made using flask for the MAD1 project as part of the curriculum at IITM.",
+        "url": "",
+        "github": "https://github.com/realyuvishere/flask_blogger"
+    },
+    {
+        "name": "WhatsApp chat analyzer",
+        "description": "A simple data engineering tool written using python to extract data from a given chat file from WhatsApp and get some stats.",
+        "url": "",
+        "github": "https://github.com/realyuvishere/whatsapp-group-chat-analyzer-and-visualizer"
+    },
+    {
+        "name": "Ticket booking system",
+        "description": "A simple ticket booking portal for events made using flask as part of the MAD1 project for IITM coursework.",
+        "url": "",
+        "github": "https://github.com/realyuvishere/flask_ticket_booking_system"
+    },
+    {
+        "name": "Grocery Store",
+        "description": "A simple grocery store portal made using flask and vue.js as part of the MAD2 project for IITM coursework.",
+        "url": "",
+        "github": "https://github.com/realyuvishere/MAD2"
+    }
+
+]
